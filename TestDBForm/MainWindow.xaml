@@ -1,0 +1,19 @@
+﻿<Window x:Class="TestDBForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDBForm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid Width="300">
+        <ComboBox x:Name="TableSelectBox" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="120" Height="22">
+            <TextBlock><Run Text="Пациенты"/></TextBlock>
+            <TextBlock><Run Text="Посещения"/></TextBlock>
+
+        </ComboBox>
+        <Label x:Name="TableLbl" Content="Таблица" HorizontalAlignment="Left" Margin="100,16,0,0" VerticalAlignment="Top" Width="80" Height="25"/>
+        <Button x:Name="AddEntryBtn" Content="Добавление данных" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="AddEntryBtn_Click"/>
+        <Button x:Name="FindEntryBtn" Content="Запрос данных" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="FindEntryBtn_Click"/>
+    </Grid>
+</Window>

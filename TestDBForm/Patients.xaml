@@ -1,0 +1,26 @@
+﻿<Window x:Class="TestDBForm.Patients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDBForm"
+        mc:Ignorable="d"
+        Title="Patients" Height="350" Width="350">
+    <Grid>
+        <Label HorizontalAlignment="Left" Margin="280,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PatientIDTxt" HorizontalAlignment="Left" Margin="38,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <TextBox x:Name="PatientSureNameTxt" HorizontalAlignment="Left" Margin="190,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <TextBox x:Name="PatientNameTxt" HorizontalAlignment="Left" Margin="38,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <TextBox x:Name="PatientMiddleNameTxt" HorizontalAlignment="Left" Margin="190,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <TextBox x:Name="PatientBirthDateTxt" HorizontalAlignment="Left" Margin="38,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <TextBox x:Name="PatientPhoneTxt" HorizontalAlignment="Left" Margin="190,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="190,26,0,0" VerticalAlignment="Top"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="38,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="190,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="38,126,0,0" VerticalAlignment="Top"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="190,126,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PatientIDLBL" Content="ID Пациента" HorizontalAlignment="Left" Margin="38,26,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="AddPacientBtn" Content="Добавить запись" HorizontalAlignment="Left" Margin="190,200,0,0" VerticalAlignment="Top" Width="120" Height="30" IsDefault="True" FontSize="15" Click="AddPacientBtn_Click"/>
+        <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" Margin="38,200,0,0" VerticalAlignment="Top" Width="120" Height="30" IsDefault="True" FontSize="15" Click="BackBtn_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="TestDBForm.FindPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDBForm"
+        mc:Ignorable="d"
+        Title="FindPatient" Height="480" Width="500">
+    <Grid>
+        <Label HorizontalAlignment="Left" Margin="258,124,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Запросить по" Padding="5" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,16,0,0">
+            <StackPanel>
+                <Label Content="Параметр" Margin="6,8,0,0" Width="120"/>
+                <ComboBox x:Name="ParamBox" Width="120" Height="22" Margin="6,0,0,0">
+                    <TextBlock><Run Text="ID паниента"/></TextBlock>
+                    <TextBlock><Run Text="Фамилия"/></TextBlock>
+                    <TextBlock><Run Text="Имя"/></TextBlock>
+                    <TextBlock><Run Text="Отчество"/></TextBlock>
+                    <TextBlock><Run Text="Дата рождения"/></TextBlock>
+                    <TextBlock><Run Text="Телефон"/></TextBlock>
+                </ComboBox>
+                <Label Width="120" Content="Значение" Margin="6,8,0,0"/>
+                <TextBox x:Name="ValueTxt" HorizontalAlignment="Left" Margin="32,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" Height="18"/>
+                <Button x:Name="FindPacientBtn" Content="Запросить" HorizontalAlignment="Left" Margin="32,16,0,0" VerticalAlignment="Top" Width="120" Height="30" IsDefault="True" FontSize="15" Click="FindPacientBtn_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Данные пациента" Padding="5" Width="450" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="16,0,0,80">
+            <StackPanel>
+                <Label x:Name="EntryesCountLbl" Content="" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                <Label Content="ID пациента" HorizontalAlignment="Left" Margin="16,-16,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientIDTxt" HorizontalAlignment="Left" Margin="16,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+                <Label Content="Фамилия" HorizontalAlignment="Left" Margin="152,-44,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientSureNameTxt" HorizontalAlignment="Left" Margin="152,-18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+                <Label Content="Имя" HorizontalAlignment="Left" Margin="288,-44,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientNameTxt" HorizontalAlignment="Left" Margin="288,-18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+                <Label Content="Отчество" HorizontalAlignment="Left" Margin="16,0,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientMiddleNameTxt" HorizontalAlignment="Left" Margin="16,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+                <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="152,-44,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientBirthDateTxt" HorizontalAlignment="Left" Margin="152,-18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+                <Label Content="Телефон" HorizontalAlignment="Left" Margin="288,-44,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="PatientPhoneTxt" HorizontalAlignment="Left" Margin="288,-18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.448" IsReadOnly="True" Height="18"/>
+
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" Margin="32,0,0,32" VerticalAlignment="Bottom" Width="120" Height="30" IsDefault="True" FontSize="15" Click="BackBtn_Click"/>
+        <Button x:Name="NextEntryBtn" Content="&gt;" HorizontalAlignment="Left" Margin="436,402,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="NextEntryBtn_Click"/>
+        <Button x:Name="PreviousEntryBtn" Content="&lt;" HorizontalAlignment="Left" Margin="390,402,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="PreviousEntryBtn_Click"/>
+    </Grid>
+</Window>
