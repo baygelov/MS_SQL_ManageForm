@@ -6,7 +6,7 @@ namespace TestDBForm
 {
     public class DBLoader
     {
-
+        // Add entry to Patients table
         public static void InsertPatientQuery(string id, string surename, string name, string middlename, string birthDate, string phone)
         {
             using (var context = new MyDbContext())
@@ -24,7 +24,7 @@ namespace TestDBForm
                 context.SaveChanges();
             }
         }
-
+        // Add entry to Visits table
         public static void InsertVisitQuery(string Vid, string date, string diagnosis, string Pid)
         {
             
@@ -42,7 +42,7 @@ namespace TestDBForm
                 context.SaveChanges();
             }
         }
-        
+        // Get entryes from Patient table
         public static List<Patient> SelectPatientQuery(string param, string value)
         {
             using (var context = new MyDbContext())
@@ -67,7 +67,7 @@ namespace TestDBForm
                 return patients;
             }
         }
-
+        // Get entryes from Visits table
         public static List<Visit> SelectVisitQuery(string param, string value)
         {
             using (var context = new MyDbContext())
