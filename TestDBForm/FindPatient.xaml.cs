@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Oracle.ManagedDataAccess.Client;
 using System.Xml.Linq;
 using System.IO;
 using TestDBForm.Model;
@@ -94,7 +84,7 @@ namespace TestDBForm
         private void ToXML_Click(object sender, RoutedEventArgs e)
         {
             List<Patient> visits = showQueryData(number);
-            using (var stream = new FileStream("C:\\Users\\bayge\\source\\repos\\MS_SQL_ManageForm\\Visits.xml", FileMode.Create))
+            using (var stream = new FileStream("Visits.xml", FileMode.Create))
             {
                 var xml = new XElement("Visits", visits.Select(x => new XElement("visit",
                     new XAttribute("Id", x.Id),
