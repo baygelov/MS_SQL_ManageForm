@@ -39,5 +39,6 @@
         <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" Margin="32,0,0,32" VerticalAlignment="Bottom" Width="120" Height="30" IsDefault="True" FontSize="15" Click="BackBtn_Click"/>
         <Button x:Name="NextEntryBtn" Content="&gt;" HorizontalAlignment="Left" Margin="436,402,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="NextEntryBtn_Click"/>
         <Button x:Name="PreviousEntryBtn" Content="&lt;" HorizontalAlignment="Left" Margin="390,402,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="PreviousEntryBtn_Click"/>
+        <Button x:Name="ToXML" Content="Экспортировать в XML" HorizontalAlignment="Left" Margin="336,186,0,0" VerticalAlignment="Top" Height="30" Width="130" Click="ToXML_Click"/>
     </Grid>
 </Window>

@@ -15,6 +15,9 @@ using Oracle.ManagedDataAccess.Client;
 using System.Xml.Linq;
 using System.IO;
 using TestDBForm.Model;
+using System.Xml.Serialization;
+using System.Runtime.InteropServices.ComTypes;
+using System.Xml;
 
 namespace TestDBForm
 {
@@ -89,6 +92,21 @@ namespace TestDBForm
                 Console.WriteLine(ex);
             }
 
+        }
+
+
+        private void ToXML_Click(object sender, RoutedEventArgs e)
+        {
+            List<Visit> visits = showQueryData(number);
+            using (var stream = new FileStream("C:\\Users\\bayge\\source\\repos\\MS_SQL_ManageForm\\Visits.xml", FileMode.Create))
+            {
+                var xml = new XElement("Visits", visits.Select(x => new XElement("visit",
+                    new XAttribute("Id", x.Id),
+                    new XAttribute("Дата_Посещения", x.Date),
+                    new XAttribute("Диагноз", x.Diagnosis),
+                    new XAttribute("Id_Пациента", x.PatientId))));
+                xml.Save(stream);
+            }
         }
     }
 }

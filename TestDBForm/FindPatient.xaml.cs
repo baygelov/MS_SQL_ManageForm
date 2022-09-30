@@ -90,5 +90,21 @@ namespace TestDBForm
                 Console.WriteLine(ex);
             }
         }
+
+        private void ToXML_Click(object sender, RoutedEventArgs e)
+        {
+            List<Patient> visits = showQueryData(number);
+            using (var stream = new FileStream("C:\\Users\\bayge\\source\\repos\\MS_SQL_ManageForm\\Visits.xml", FileMode.Create))
+            {
+                var xml = new XElement("Visits", visits.Select(x => new XElement("visit",
+                    new XAttribute("Id", x.Id),
+                    new XAttribute("Фамилия", x.SureName),
+                    new XAttribute("Имя", x.Name),
+                    new XAttribute("Отчество", x.MiddleName),
+                    new XAttribute("Дата_рождения", x.BirthDate),
+                    new XAttribute("Телефон", x.Phone))));
+                xml.Save(stream);
+            }
+        }
     }
 }

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\bayge\source\repos\TestDBForm\TestDBForm\obj\Debug\
+C:\Users\bayge\source\repos\MS_SQL_ManageForm\TestDBForm\obj\Debug\
 TestDBForm
 none
 false
 DEBUG;TRACE
-C:\Users\bayge\source\repos\TestDBForm\TestDBForm\App.xaml
+C:\Users\bayge\source\repos\MS_SQL_ManageForm\TestDBForm\App.xaml
 5701895053
 
 13-1517220785
-28-1155954159
+281003665325
 FindPatient.xaml;FindVisit.xaml;MainWindow.xaml;Patients.xaml;Visits.xaml;
 
 False
